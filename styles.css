@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.logo {
+  height: 200px;
+  width: 200px;
+}
+
+.title {
+  font-weight: 700;
+  margin-bottom: 45px;
+  color: #121c2d;
+}
+
+.upload-form {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.upload-box {
+  border: 3px dashed #d0d0d0;
+  width: 245px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  background-color: #f5f5f5;
+  margin-bottom: 45px;
+}
+
+.cloud-icon {
+  margin-top: 25px;
+  margin-bottom: 7px;
+  width: 30px;
+  height: 24px;
+}
+
+.browse-text {
+  color: #65bbeb;
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.filename-text {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.filename-text > img {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.filename-text > div {
+  align-self: center;
+  color: #9d9d9d;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.submit-btn {
+  background-color: #7de9af;
+  color: #fff;
+  width: 120px;
+  height: 40px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 5px;
+  box-shadow: 0px 5px 14px 0px #d3d3d3;
+  margin-bottom: 22.5px;
+}
+
+#loader {
+  display: none;
+}
+
+#loader.display {
+  width: 25px;
+  aspect-ratio: 1;
+  display: grid;
+  border-radius: 50%;
+  background: linear-gradient(
+        0deg,
+        rgb(0 0 0/50%) 30%,
+        #0000 0 70%,
+        rgb(0 0 0/100%) 0
+      )
+      50%/8% 100%,
+    linear-gradient(90deg, rgb(0 0 0/25%) 30%, #0000 0 70%, rgb(0 0 0/75%) 0)
+      50%/100% 8%;
+  background-repeat: no-repeat;
+  animation: loader 1s infinite steps(12);
+}
+#loader::before,
+#loader::after {
+  content: "";
+  grid-area: 1/1;
+  border-radius: 50%;
+  background: inherit;
+  opacity: 0.915;
+  transform: rotate(30deg);
+}
+#loader::after {
+  opacity: 0.83;
+  transform: rotate(60deg);
+}
+
+@keyframes loader {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.sids-found {
+  display: none;
+}
+
+.sids-found.display {
+  display: block;
+  color: #828282;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.sid-container {
+  margin-bottom: 20px;
+}
+
+.response-time {
+  font-size: 13px;
+  color: #343434;
+}
+
+pre > code {
+  font-family: "Fira Mono", monospace;
+  text-align: left;
+  width: max-content;
+  display: block;
+}

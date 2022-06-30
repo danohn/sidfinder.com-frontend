@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="SID Finder" />
+    <meta
+      name="description"
+      content="SID Finder is a tool which can find Twilio SIDs for a given image, useful for sending to Twilio Support."
+    />
+    <meta
+      name="keywords"
+      content="Twilio, Twilio SID, Twilio SIDs, SID, SID Finder"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <meta property="og:title" content="SID Finder" />
+    <meta property="og:site_name" content="SID Finder" />
+    <meta property="og:url" content="https://sidfinder.com" />
+    <meta
+      property="og:description"
+      content="SID Finder is a tool which can find Twilio SIDs for a given image, useful for sending to Twilio Support."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://sidfinder.com/logo.svg" />
+    <title>SID Finder</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
+    <div class="container">
+      <img class="logo" src="logo.svg" alt="Twilio Logo" />
+      <h1 class="title">SID Finder</h1>
+      <form class="upload-form">
+        <div class="upload-box">
+          <img src="cloud.svg" alt="Cloud Icon" class="cloud-icon" />
+          <label class="browse-text custom-file-upload" for="file-upload"
+            >Browse files</label
+          >
+          <input id="file-upload" type="file" />
+        </div>
+        <button class="submit-btn" id="submitButton">Analyse</button>
+      </form>
+      <div id="loader"></div>
+
+      <p class="sids-found" id="sid-text">SIDs Found:</p>
+      <div class="sid-container" id="sidContainer">
+        <pre id="pre"></pre>
+      </div>
+      <script src="app.js"></script>
+    </div>
+  </body>
+</html>
